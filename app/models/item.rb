@@ -8,6 +8,7 @@ class Item < ApplicationRecord
 
   belongs_to :user
   has_one_attached :image
+  has_one :order
 
   # 必須項目
   validates :name, :image, :price, :description, :category_id, :status_id, :payment_id, :prefecture_id, :day_id, presence: true

@@ -19,4 +19,4 @@ function calculate() {
 }
 
 document.addEventListener("turbo:load", calculate);
-document.addEventListener("turbo:render", calculate);
+// document.addEventListener("turbo:render", calculate);

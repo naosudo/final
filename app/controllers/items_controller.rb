@@ -50,7 +50,8 @@ class ItemsController < ApplicationController
   end
 
   def redirect_unless_owner
-    redirect_to root_path unless current_user == @item.user
+    return unless current_user != @item.user || @item.order.present?
+    redirect_to root_path
   end
 
   def item_params
